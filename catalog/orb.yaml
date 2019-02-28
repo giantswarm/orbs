@@ -1,11 +1,12 @@
 version: 2.1
 
 description: |
-  Build go applications with architect
+  Handle interactions with our managed apps catalog.
 
 commands:
-    catalog-build:
-        description: Rebuild the catalog.
+    sync:
+        description: |
+            Sync your repository with our managed app catalog. Sourcecode can be found here https://github.com/giantswarm/orbs
         parameters:
             reponame:
                 type: string
