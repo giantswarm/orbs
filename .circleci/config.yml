@@ -9,10 +9,9 @@ workflows:
       - orb-tools/publish:
           orb-path: go-build/orb.yaml
           orb-ref: giantswarm/go-build@dev:${CIRCLE_BRANCH}
-          token-variable: "$CIRCLECI_DEV_API_TOKEN"
+          token-variable: "CIRCLECI_DEV_API_TOKEN"
 
       - orb-tools/publish:
           orb-path: catalog-build/orb.yaml
           orb-ref: giantswarm/catalog-build@dev:${CIRCLE_BRANCH}
-          token-variable: "$CIRCLECI_DEV_API_TOKEN"
-
+          token-variable: "CIRCLECI_DEV_API_TOKEN"
