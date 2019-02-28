@@ -14,9 +14,9 @@ commands:
             token:
                 type: string
                 description: Personal access token.
-        steps: 
+        steps:
             - run:
-                name: 
+                name:
                 command: |
                     set -o errexit
                     set -o nounset

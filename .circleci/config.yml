@@ -13,7 +13,7 @@ workflows:
           publish-token-variable: CIRCLECI_DEV_API_TOKEN
           requires:
             - orb-tools/lint
-      
+
       - orb-tools/dev-promote-prod:
           orb-name: giantswarm/catalog
           publish-token-variable: CIRCLECI_DEV_API_TOKEN
