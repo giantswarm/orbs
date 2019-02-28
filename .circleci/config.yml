@@ -8,7 +8,8 @@ workflows:
     jobs:
       - orb-tools/lint
       - orb-tools/publish-dev:
-          orb-path: workspace/catalog/orb.yaml
+          checkout: true
+          orb-path: catalog/orb.yaml
           orb-name: giantswarm/catalog
           publish-token-variable: CIRCLECI_DEV_API_TOKEN
           requires:
