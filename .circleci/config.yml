@@ -9,6 +9,7 @@ workflows:
       - orb-tools/lint
 
       - orb-tools/pack:
+          source-dir: catalog
           requires:
             - orb-tools/lint
 
