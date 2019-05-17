@@ -10,6 +10,7 @@ workflows:
 
       - orb-tools/pack:
           source-dir: catalog
+          destination-orb-path: catalog/orb.yml
           requires:
             - orb-tools/lint
 
