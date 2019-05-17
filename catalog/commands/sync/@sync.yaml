@@ -1,9 +1,0 @@
-description: "Sync your repository with our managed app catalog. Source code can be found here https://github.com/giantswarm/orbs."
-parameters:
-  reponame:
-    type: "string"
-    description: "Name of the repo."
-  token:
-    type: "string"
-    description: "Personal access token."
-
