@@ -7,13 +7,19 @@ workflows:
   catalog_build:
     jobs:
       - orb-tools/lint
+
+      - orb-tools/pack:
+          source-dir: catalog
+          requires:
+            - orb-tools/lint
+
       - orb-tools/publish-dev:
           checkout: true
           orb-path: catalog/orb.yaml
           orb-name: giantswarm/catalog
           publish-token-variable: CIRCLECI_DEV_API_TOKEN
           requires:
-            - orb-tools/lint
+            - orb-tools/pack
 
       - orb-tools/dev-promote-prod:
           orb-name: giantswarm/catalog
